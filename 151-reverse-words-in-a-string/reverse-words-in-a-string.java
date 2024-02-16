@@ -3,10 +3,8 @@ class Solution {
         StringBuilder ans = new StringBuilder("");
         String[] str = s.split("\\s+");
         for(int i=str.length -1 ; i>=0 ; i--){
-            ans.append(str[i]);
-            ans.append(" ");
+            ans.append(str[i]).append(" ");
         }
-        String out = ans.toString();
-        return out.trim() ;
+        return ans.toString().trim();
     }
 }
