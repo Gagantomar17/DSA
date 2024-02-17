@@ -14,13 +14,13 @@ public class Solution {
         }
         temp1 = headA ;
         temp2 = headB ;
-        if(len1 == 1 && len2 == 1){
-            if(temp1 == temp2){
-                return temp1;
-            }else{
-                return temp1.next ;
-            }
-        }
+        // if(len1 == 1 && len2 == 1){
+        //     if(temp1 == temp2){
+        //         return temp1;
+        //     }else{
+        //         return temp1.next ;
+        //     }
+        // }
         temp1 = headA ;
         temp2 = headB ;
         if(len1 > len2){
