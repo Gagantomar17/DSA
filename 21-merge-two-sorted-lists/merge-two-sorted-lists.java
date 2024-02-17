@@ -14,21 +14,44 @@ class Solution {
         ListNode l2 = list2 ;
         ListNode head = new ListNode(100);
         ListNode ans = head ;
+        // this code uses extra space 
+
+        // while(l1 != null && l2 != null){
+        //     if(l1.val < l2.val){
+        //         ListNode temp = new ListNode(l1.val);
+        //         ans.next = temp ;
+        //         ans = ans.next;
+        //         l1 = l1.next ;
+        //     }else{
+        //         ListNode temp = new ListNode(l2.val);
+        //         ans.next = temp;
+        //         ans = ans.next ;
+        //         l2 = l2.next ;
+        //     }
+        // }
+        // if(l1 == null){
+        //     ans.next = l2;
+        // }else{
+        //     ans.next = l1 ;
+        // }
+
+        // return head.next ;
+
+        // without extra space 
+
         while(l1 != null && l2 != null){
             if(l1.val < l2.val){
-                ListNode temp = new ListNode(l1.val);
-                ans.next = temp ;
-                ans = ans.next;
+                ans.next = l1 ;
+                ans = ans.next ;
                 l1 = l1.next ;
             }else{
-                ListNode temp = new ListNode(l2.val);
-                ans.next = temp;
+                ans.next = l2;
                 ans = ans.next ;
                 l2 = l2.next ;
             }
         }
         if(l1 == null){
-            ans.next = l2;
+            ans.next = l2 ;
         }else{
             ans.next = l1 ;
         }
