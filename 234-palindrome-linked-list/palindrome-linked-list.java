@@ -1,11 +1,17 @@
 class Solution {
 
     public ListNode reverse(ListNode head){
-        if(head.next == null) return head ;
-        ListNode newHead = reverse(head.next);
-        head.next.next = head ;
-        head.next = null ;
-        return newHead ;
+        ListNode curr = head ;
+        ListNode prev = null ;
+        ListNode agla = null ;
+        while(curr != null){
+            agla = curr.next ;
+            curr.next = prev ;
+            prev = curr ;
+            curr = agla ;
+
+        }
+        return prev ;
     }
 
 
