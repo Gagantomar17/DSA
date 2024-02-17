@@ -14,7 +14,9 @@ class Solution {
         while(temp!=null && temp.next != null){
             if(temp.val == temp.next.val){
                 temp.next = temp.next.next ;
-                //temp = temp.next ;
+                // temp = temp.next ;
+                // the line above will not check more than two consecutive 
+                // no for repeteion 
             }else {
                 temp = temp.next ;
             }
