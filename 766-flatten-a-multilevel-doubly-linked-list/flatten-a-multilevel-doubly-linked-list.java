@@ -26,7 +26,7 @@ class Solution {
                     t.prev = c;
                 }
             }
-            temp = temp.next ;
+            temp = t ;
         }
         return head ;
     }
